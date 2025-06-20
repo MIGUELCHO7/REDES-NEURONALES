@@ -1,0 +1,22 @@
+<div class="container">
+  <form (ngSubmit)="predecir()" #form="ngForm" class="formulario">
+     <h1>Predicción de obesidad en adolescentes</h1>
+    <input [(ngModel)]="nombre" name="nombre" placeholder="Nombre" required>
+    <input [(ngModel)]="apellidos" name="apellidos" placeholder="Apellidos" required>
+    <input [(ngModel)]="edad" name="edad" type="number" placeholder="Edad" [value]="null">
+    <input [(ngModel)]="peso" name="peso" type="number" placeholder="Peso (kg)" [value]="null" required>
+    <input [(ngModel)]="estatura" name="estatura" type="number" step="0.01" placeholder="Estatura (m)" [value]="null" required>
+    <button type="submit" class="btn">Predecir</button>
+  </form>
+
+  @if (resultado.length > 0) {
+  <div class="resultado">
+    <h3 class="titulo">Resultado:</h3>
+    <ul class="lista">
+      @for (r of resultado; track r) {
+      <li>{{ r }}</li>
+      }
+    </ul>
+  </div>
+  }
+</div>

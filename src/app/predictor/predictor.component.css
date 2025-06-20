@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Estilo para el formulario */
+.formulario {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formulario h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.formulario input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #ff0080; /* fucsia */
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  color: #111;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario input:focus {
+  border-color: #00ff00; /* verde al enfocar */
+  outline: none;
+}
+
+.formulario input:invalid {
+  border-color: red;
+}
+
+.btn {
+  background-color: #00e6f6;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #00ccff;
+}
+
+/* Estilo para el resultado */
+.resultado {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: linear-gradient(to bottom right, #ffc0cb, #a64ca6);
+  color: #2c2c2c;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.lista {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
